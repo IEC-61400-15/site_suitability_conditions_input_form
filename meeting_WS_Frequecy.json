@@ -38,15 +38,33 @@
   }
 
   ----OR------
-  {
-      "Wind Direction": [all the values in the column],
-      "Wind Speed": [all the values in the column],
-      "Turbine": [all the values in the column],
-  },
+    {
+        "Wind Direction": [all the values in the column],
+        "Wind Speed": [all the values in the column],
+        "Turbine": [all the values in the column],
+    },
     {
         "Wind Direction": [all the values in the column],
         "Wind Speed": [all the values in the column],
         "Mast A Frequency": [all the values in the column],
         "Mast A Data Occurrences": [all the values in the column],
+    }
+
+    ----OR------
+    {   "rows": ["Wind Direction", "Wind Speed", "Mast A Frequency", "Mast A Data Occurrecnces"]
+        "data": [
+            [all the wind direction values],
+            [all the wind speed values],
+            [all the mast a frequency values],
+            [all the mast a occurrence values],
+        ]
+    },
+    {
+        "rows": ["Wind Direction", "Wind Speed", "Turbine 1 Frequency"]
+        "data": [
+            [all the wind direction values],
+            [all the wind speed values],
+            [all the turbine 1 frequency values],
+        ]
     }
 }
