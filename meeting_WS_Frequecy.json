@@ -1,0 +1,52 @@
+{   
+    "columns": [
+        "Wind Direction (Midpoint)",
+        "Wind Speed (Midpoint) [m\/s]",
+        "Mast A",
+        "Data occurrences",
+        "Mast B",
+        "Data occurrences.1",
+        "Mast C",
+        "Data occurrences.2",
+        "Turbine 1",
+        "Turbine 2",
+        "Turbine 3",
+        "Turbine 4",
+        "Turbine 5",
+        "Turbine 6",
+        "Turbine 7",
+        "Turbine 8",
+        "Turbine 9",
+        "Turbine 10"
+    ],
+    Wind Direction: [all the values]
+    "0": {
+        ["ALL", 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        [0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        [1, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        [2, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+
+    },
+
+----OR------
+"Wind Direction": {"Wind Speed": [all the values]}
+    "0": {
+        "ALL": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "0": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "1": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0],
+        "2": [0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0] 
+  }
+
+  ----OR------
+  {
+      "Wind Direction": [all the values in the column],
+      "Wind Speed": [all the values in the column],
+      "Turbine": [all the values in the column],
+  },
+    {
+        "Wind Direction": [all the values in the column],
+        "Wind Speed": [all the values in the column],
+        "Mast A Frequency": [all the values in the column],
+        "Mast A Data Occurrences": [all the values in the column],
+    }
+}
