@@ -68,3 +68,48 @@
         ]
     }
 }
+
+----- Proposal by Atsushi ---
+
+"WS Drequency": {
+    "mast A" : {
+	"WS Frequency all direction" : [ C3:C14 ],
+	"WS Data Ocuurencies all direction" : [ D3:D14 ],
+        "WS Frequency" : [ [ C15:C55 ] [ C56:C96 ] .... ],
+	"WS Data Ocuurencies" : [ [ D15:D55 ] [ D56:D96 ] .... ],
+    }
+    "mast B" : {
+	"WS Frequency all direction" : [ E3:E14 ],
+	"WS Data Ocuurencies all direction" : [ F3:F14 ],
+        "WS Frequency" : [ [ E15:E55 ] [ E56:E96 ] .... ],
+	"WS Data Ocuurencies" : [ [ F15:F55 ] [ F56:F96 ] .... ],
+    }
+    "mast C" : {
+	"WS Frequency all direction" : [ G3:G14 ],
+	"WS Data Ocuurencies all direction" : [ H3:H14 ],
+        "WS Frequency" : [ [ G15:G55 ] [ G56:G96 ] .... ],
+	"WS Data Ocuurencies" : [ [ H15:D55 ] [ H56:H96 ] .... ],
+    }
+    "Turbine 1" : {
+	"WS Frequency all direction" : [ I3:I14 ],
+        "WS Frequency" : [ [ I15:I55 ] [ I56:I96 ] .... ],
+    }    
+    "Turbine 2" : {
+	"WS Frequency all direction" : [ J3:J14 ],
+        "WS Frequency" : [ [ J15:J55 ] [ J56:J96 ] .... ],
+    }    
+}
+
+# 1) As the contents to the each array, the correspoding excel sheet cells are
+#    reffered for clarification.
+# 2) The column A and B in the excel sheet is commont the other tabs
+#    and should be defined outside this tab.
+# 3) The column C and D both shows the information of "mast A". This structure
+#    is implemented.
+# 4) From row 3 to 14 show the wind speed distribution for all the wind directions,
+#    and from row 15 to end show the wind speed distibution for each direction.
+#    This difference is implemented. In addition, row 15 to the end has two dimentionsal
+#    structure. This is also implemented.
+
+
+---- Proposal by Atsushi End ----
