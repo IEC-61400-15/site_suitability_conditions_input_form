@@ -1,4 +1,12 @@
 {
+    "Meta Data" : {
+	"number of wind direction sectors" : 12,
+	"number of met masts" : 2,
+	"met mast IDs" : ["Gobblers Knob West", "Gobblers Knob East"],
+	"number of wind turbines" : 137,
+	"wind turbine IDs" : ["01", "02", ...]
+    }
+
     "Project Information" : {
 	"Project Name" : "Example",
 	"Project Owner" : "",
@@ -6,22 +14,28 @@
 	"Name of person & organization completeing form" : "",
 	"Date hen form was completed" : "",
     },	
-    "Turbine Layout Summary" : {
-	"Number of Wind Turbine" : 9,
-	"WInd Turbine" : [
-	    {
-		"Air Density" : 1.161,
-		"Annual Average WInd Speed at Hub Height" : 7.47,
-	    },
-	    {
-		"Air Density" : 1.161,
-		"Annual Average WInd Speed at Hub Height" : 7.00,
-	    }
-	]
-	""
-	    
-	"Air Density" : [ 1.161 1.161 1.161 1.161 1.161 1.161 1.161 1.161 1.161 ],
-	"Annual Average Wind Speed at Hub Height" : [],
+    "Met Mast Summary" : {
+	"Gobblers Knob West": {
+	    "Easting Longitude" : ,
+	    "Northing Latitude" : ,
+	    ...
+	}
+	"Gobblers Knob Esst": {
+	    "Easting Longitude" : ,
+	    "Northing Latitude" : ,
+	    ...
+	}
+    },
+        "Turbine Layout Summary" : {
+	"01": {
+	    "Project Name" : "Colorado Green",
+	    "Easting Longitude" : 37.671,
+	    "Northing Latitude" : -102.641,
+	    "Ground Elevation Above Sea Level" : 1357,
+	    "WTG Manufacturer" : "GE",
+	    "WTG Model" : "GE1.6-91",
+	    ....
+	}
     },
     "WS Frequency": {
         "Gobblers Knob West": {
