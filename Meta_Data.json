@@ -1,0 +1,8 @@
+    "Meta Data": {
+        "Number of wind direction sectors": 12,
+	"Wind speed bin width": 2,
+        "Number of met masts": 3,
+        "Met mast IDs": ["Mast A", "Mast B", "Mast C"],
+        "Number of wind turbines": 10,
+        "Wind turbine IDs": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"]
+    },
