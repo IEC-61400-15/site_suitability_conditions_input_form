@@ -1,5 +1,5 @@
-### IEC61400-15-1 site suitability input foam converter (from *.xlsx to *.json)
-## Written in June 15 2022 to Jube 17 2022 during the meeting in Copenhagen 
+### IEC61400-15-1 site suitability input form converter (from *.xlsx to *.json)
+## Written in June 15 2022 to June 17 2022 during the meeting in Copenhagen 
 ## VERY TEMPORARY CODE without much error treatment
 ## Only tested for the wind direction sector width is 30 degree and wind speed bin width is 1 m/s.
 ## Unexpected error may happen without any warnings.
