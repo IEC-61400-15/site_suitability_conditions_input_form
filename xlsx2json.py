@@ -1,5 +1,5 @@
 ### IEC61400-15-1 site suitability input form converter (from *.xlsx to *.json)
-## Written in June 15 2022 to June 17 2022 during the meeting in Copenhagen 
+## Written in June 15 2022 to June 17 2022 during the meeting in Copenhagen
 ## VERY TEMPORARY CODE without much error treatment
 ## Only tested for the wind direction sector width is 30 degree and wind speed bin width is 1 m/s.
 ## Unexpected error may happen without any warnings.
@@ -22,14 +22,25 @@ import openpyxl
 import json
 import sys
 
-# 
+#
 args = sys.argv
 InputXlsxFile = args[1]
 OutputJsonFile = args[2]
 
 wb = openpyxl.load_workbook(InputXlsxFile,data_only=True)
 ws = wb['Project Information']
-
+project_name = ws.cell(1,2).value
+project_owner = ws.cell(2,2).value
+project_number = ws.cell(3,2).value
+author_name = ws.cell(4,2).value
+project_date = str(ws.cell(5,2).value)
+revision_number = ws.cell(6,2).value
+country = ws.cell(7,2).value
+datum = ws.cell(8,2).value
+projection = ws.cell(9,2).value
+report_filename = ws.cell(10,2).value
+report_revision_number = ws.cell(11,2).value
+def_version = ws.cell(12,2).value
 
 print("Analyzing the excel file...")
 
@@ -70,7 +81,7 @@ nmd = len(mdids)
 print("The number of measurement devices is",nmd)
 print("Their IDs are",mdids)
 
-# Make the whole the list of WT + meas. device
+# Make the whole list of WT + meas. device
 mdwtids = mdids + wtids
 
 
@@ -83,9 +94,20 @@ OjMetaData["Measurement device IDs"] = mdids
 OjMetaData["Number of wind turbines"] = nwt
 OjMetaData["Wind turbine IDs"] = wtids
 
-# Project inforamtion
+# Project information
 OjPI = {}
-OjPI
+OjPI["Name"] = project_name
+OjPI["Owner"] = project_owner
+OjPI["Number"] = project_number
+OjPI["Author"] = author_name
+OjPI["Date"] = project_date
+OjPI["Revision number and reason"] = revision_number
+OjPI["Country"] = country
+OjPI["Datum"] = datum
+OjPI["Projection"] = projection
+OjPI["Report filename"] = report_filename
+OjPI["Report revision number"] = report_revision_number
+OjPI["Dgital exchange format version"] = def_version
 
 # Turbine Layout Summary
 OjTLS = {}
@@ -111,7 +133,7 @@ for wt in wtids:
     tmpobj["Associated Data Source"] = ws.cell(trow,11).value
     tmpobj["Ve50"] = ws.cell(trow,12).value
     tmpobj["V50"] = ws.cell(trow,13).value
-    tmpobj["CoV"] = ws.cell(trow,14).value
+    tmpobj["COV"] = ws.cell(trow,14).value
     tmpobj["Air Density"] = ws.cell(trow,15).value
     tmpobj["Annual Average Wind Speed at Hub Height"] = ws.cell(trow,16).value
     tmpobj["Scale Parameter of Weibull Function"] = ws.cell(trow,17).value
@@ -121,7 +143,7 @@ for wt in wtids:
     tmpobj["Annual Average Turbulence Intensity at 15 m/s"] = ws.cell(trow,21).value
     tmpobj["Standard Deviation of Turbulence Intensity at 15 m/s"] = ws.cell(trow,22).value
     tmpobj["Inflow Angle"] = ws.cell(trow,23).value
-        
+
     OjTLS[wt] = tmpobj
 
 # Measurement Device Summary
@@ -134,7 +156,7 @@ for md in mdids:
             trow = row
             exit
         row = row + 1
-        
+
     EachMDS = {}
     EachMDS["Easting or Latitude"] = ws.cell(trow,2).value
     EachMDS["Northing or Latitude"] = ws.cell(trow,3).value
@@ -159,8 +181,8 @@ for md in mdids:
 
     tmpobj = {}
 
-    # WS Frequency    
-    tmparray2 = []    
+    # WS Frequency
+    tmparray2 = []
     iwd = 1
     while iwd <= nwds:
         tmparray = []
@@ -171,11 +193,11 @@ for md in mdids:
             iws = iws + wsbw
         tmparray2.append(tmparray)
         iwd = iwd + 1
-        
+
     tmpobj['WS Frequency'] = tmparray2
 
     # WS number of samples
-    tmparray2 = []    
+    tmparray2 = []
     iwd = 1
     while iwd <= nwds:
         tmparray = []
@@ -186,7 +208,7 @@ for md in mdids:
             iws = iws + wsbw
         tmparray2.append(tmparray)
         iwd = iwd + 1
-        
+
     tmpobj['WS Number of samples'] = tmparray2
 
     OjWSF[md]=tmpobj
@@ -202,8 +224,8 @@ for wt in wtids:
         column = column + 1
 
     tmpobj = {}
-    # WS Frequency    
-    tmparray2 = []    
+    # WS Frequency
+    tmparray2 = []
     iwd = 1
     while iwd <= nwds:
         tmparray = []
@@ -214,11 +236,11 @@ for wt in wtids:
             iws = iws + wsbw
         tmparray2.append(tmparray)
         iwd = iwd + 1
-        
+
     tmpobj['WS Frequency'] = tmparray2
 
     OjWSF[wt]=tmpobj
-    
+
 
 # WS Weibull
 ws = wb['WS Weibull']
@@ -246,14 +268,14 @@ for mdwt in mdwtids:
         tmparray2.append(ws.cell(5 + nwds + iwd,tcolumn).value)
         tmparray3.append(ws.cell(5 + 2 * nwds + iwd, tcolumn).value * 100.0)
         iwd = iwd + 1
-        
+
     tmpobj['WS Weibull scale parameter'] = tmparray1
     tmpobj['WS Weibull shape parameter'] = tmparray2
     tmpobj['WS Weibull frequency'] = tmparray3
-    
+
     OjWSW[mdwt]=tmpobj
 
-    
+
 ## Ambient Mean TI
 ws = wb['Ambient Mean TI']
 OjAMTI = {}
@@ -278,9 +300,9 @@ for mdwt in mdwtids:
         iws = iws + wsbw
     tmpobj["Ambient mean TI all directions"] = tmparray
 
-    
-    # For each wind direction 
-    tmparray2 = []    
+
+    # For each wind direction
+    tmparray2 = []
     iwd = 1
     while iwd <= nwds:
         tmparray = []
@@ -293,7 +315,7 @@ for mdwt in mdwtids:
         iwd = iwd + 1
     tmpobj['Ambient mean TI'] = tmparray2
 
-    
+
     OjAMTI[mdwt] = tmpobj
 
 
@@ -321,9 +343,9 @@ for mdwt in mdwtids:
         iws = iws + wsbw
     tmpobj["SD TI all directions"] = tmparray
 
-    
-    # For each wind direction 
-    tmparray2 = []    
+
+    # For each wind direction
+    tmparray2 = []
     iwd = 1
     while iwd <= nwds:
         tmparray = []
@@ -361,53 +383,51 @@ for mdwt in mdwtids:
         tmparray.append(ws.cell(row,tcolumn).value * 100)
         iws = iws + wsbw
     tmpobj["SD TI all directions"] = tmparray
-    
+
     OjEATI[mdwt]= tmpobj
-    
+
 ## Temperature
 ws = wb['Temperature']
 OjTEMP = {}
 
 # For meas. device and WT
-for md in mdids:
+for mdwt in mdwtids:
     ## Prepare empty dictionary
     tmpobj = {}
-    
+
     ## Scalar variables
     column = 2
-    while (column <= nmd + 1):
-        if (str(ws.cell(1,column).value)) == md:
+    while (column <= 2 * nwt + 2 * nmd + 1):
+        if (str(ws.cell(3,column).value)) == mdwt:
             tcolumn = column
             exit
         column = column + 1
 
-        
-    tmpobj['Yearly mean ambient Temperature'] = ws.cell(2,tcolumn).value
-    tmpobj['Days per year with at least 1 hour below -20 deg'] = ws.cell(3,tcolumn).value
+    tmpobj['Yearly mean ambient Temperature'] = ws.cell(4,tcolumn).value
+    tmpobj['Days per year with at least 1 hour below -20 deg'] = ws.cell(5,tcolumn).value
 
     ## Vector variables
     column = 2
-    while (column <= nmd * 2 + 1):
-        if (str(ws.cell(5,column).value)) == md:
+    while (column <= 2 * nwt + 2* nmd + 1):
+        if (str(ws.cell(3,column).value)) == mdwt:
             tcolumn = column
             exit
         column = column + 1
-
 
     tmparray1 = []
     tmparray2 = []
     itemp = 1
     while itemp <= 91:
-        row = 5 + itemp
+        row = 8 + itemp
         tmparray1.append(ws.cell(row,tcolumn).value)
         tmparray2.append(int(ws.cell(row,tcolumn+1).value))
         itemp = itemp + 1
     tmpobj["Temperature frequency"] = tmparray1
-    tmpobj["Number of sanples"] = tmparray2
-       
-    OjTEMP[md] = tmpobj
+    tmpobj["Number of samples"] = tmparray2
 
-## Shear    
+    OjTEMP[mdwt] = tmpobj
+
+## Shear
 ws = wb['Shear']
 OjSHEAR = {}
 
@@ -432,7 +452,7 @@ for mdwt in mdwtids:
     tmpobj["Directional shear"] = tmparray
 
     OjSHEAR[mdwt]=tmpobj
-    
+
 
 ## Inflow Angle
 ws = wb['Inflow Angle']
@@ -481,10 +501,11 @@ for mdwt in mdwtids:
     tmpobj["CcT"] = ws.cell(6,tcolumn).value
 
     OjCCT[mdwt]=tmpobj
-    
-    
+
+
 # Make top level keys
 top = {}
+top["Project Information"] = OjPI
 top["Meta data"] = OjMetaData
 top["Turbine Layout Summary"] = OjTLS
 top["Measurement Device Summary"] = OjMDS
@@ -502,6 +523,6 @@ top["CcT"] = OjCCT
 # Damp the json file
 with open(OutputJsonFile, 'w') as f:
     json.dump(top, f, ensure_ascii=False, indent=4)
-    
-    
-    
+
+
+
