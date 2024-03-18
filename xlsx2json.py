@@ -1,22 +1,6 @@
 ### IEC61400-15-1 site suitability input form converter (from *.xlsx to *.json)
-## Written in June 15 2022 to June 17 2022 during the meeting in Copenhagen
-## VERY TEMPORARY CODE without much error treatment
-## Only tested for the wind direction sector width is 30 degree and wind speed bin width is 1 m/s.
-## Unexpected error may happen without any warnings.
-
-## Atsushi Yamaguchi :  yamaguchi.atsushi@g.ashikaga-u.ac.jp
-
 ## Usage:
 ## xlsx2json.py [Input xlsx file] [Output json file]
-
-## TODO
-## 1) Avoid redundant code. Should be put in functions in nice way (without using global variables...)
-## 2) Test with some more examples, especially with the case of wind direction sector number is
-##    16 or wind speed bin width is 2.
-## 3) The LFs between array elements should be removed in the ooutpuf file for readability.
-## 4) Prepare GUI for easier use ??
-## 5) Error and exeption treatment should be enhaced.
-
 
 import openpyxl
 import json
