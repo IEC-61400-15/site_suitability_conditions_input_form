@@ -19,7 +19,7 @@ The .xlsx file and Javasript Object Notation (JSON) file are intended to facilia
 
 [Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.xlsx)
 
-### JSON Version (using the xlsxjson.py converter):
+### JSON Version (using the xlsx2json.py converter):
 [Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.json)
 
 ## Issues
