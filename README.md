@@ -12,17 +12,15 @@ This framework provides for organization of wind and other climatic condition pa
 Furthermore, the framework presents a Digital Exchange Format, consisting of complementary excel and JSON files, embodying the above mentioned reporting requirements and data structure. The excel and JSON files contain identical information. The excel file is useful for human readability, while JSON format is better suited for machine readability. The Digital Exchange Format contains the minimum requirements of data for assessment of the suitability of a wind project development site for any contemplated turbine make/model, and together with the report provides a clear view of project meteorological conditions
 
 ## Usage
-The .xlsx file and Javasript Object Notation (JSON) file are intended to faciliate and streamline data exchange between wind industry stakeholders.  The IEC team has also included a versions that have been populated with example data. 
+The .xlsx file and Javasript Object Notation (JSON) file are intended to faciliate and streamline data exchange between wind industry stakeholders.  The IEC team has also included a versions that have been populated with example data.
 
-### Excel Versions:
-Template: https://github.com/IEC-61400-15/site_suitability_conditions_input_form/blob/main/Site%20Suitability%20Input%20Conditions%20Form%20v15(20220616)_with_example_data.xlsx
+### Excel Version:
+[Template](site_suitability_input_conditions_form_v16_20240305.xlsx)
 
-Template with example data: https://github.com/IEC-61400-15/site_suitability_conditions_input_form/blob/main/Site%20Suitability%20Input%20Conditions%20Form%20v15(20220616)_with_example_data.xlsx
+[Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.xlsx)
 
-### JSON Versions
-Template:
-
-Template with example data:
+### JSON Version (using the xlsx2json.py converter):
+[Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.json)
 
 ## Issues
 If you find any bugs or inconisstencies in the guidance please post an issue in this repository here: https://github.com/IEC-61400-15/site_suitability_conditions_input_form/issues
