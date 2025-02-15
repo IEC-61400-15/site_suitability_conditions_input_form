@@ -11,10 +11,10 @@
         "Projection": "WGS84",
         "Report filename": "N/A",
         "Report revision number": "N/A",
-        "Dgital exchange format version": "1.0"
+        "Digital exchange format version": "1.0"
     },
     "Meta data": {
-        "Number of wind direction secttors": 12,
+        "Number of wind direction sectors": 12,
         "Wind speed bin width": 1,
         "Number of measurement devices": 2,
         "Measurement device IDs": [
@@ -38,7 +38,7 @@
     "Turbine Layout Summary": {
         "97": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.595,
+            "Easting or Longitude": -102.595,
             "Northing or Latitude": 37.7145,
             "Ground Elevation Above Sea Level": 1336,
             "Wind Turbine Manufacturer": "GE",
@@ -62,7 +62,7 @@
         },
         "98": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.601,
+            "Easting or Longitude": -102.601,
             "Northing or Latitude": 37.7145,
             "Ground Elevation Above Sea Level": 1341,
             "Wind Turbine Manufacturer": "GE",
@@ -86,7 +86,7 @@
         },
         "100": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.598,
+            "Easting or Longitude": -102.598,
             "Northing or Latitude": 37.7145,
             "Ground Elevation Above Sea Level": 1339,
             "Wind Turbine Manufacturer": "GE",
@@ -110,7 +110,7 @@
         },
         "102": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.612,
+            "Easting or Longitude": -102.612,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1344,
             "Wind Turbine Manufacturer": "GE",
@@ -134,7 +134,7 @@
         },
         "103": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.623,
+            "Easting or Longitude": -102.623,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1345,
             "Wind Turbine Manufacturer": "GE",
@@ -158,7 +158,7 @@
         },
         "104": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.62,
+            "Easting or Longitude": -102.62,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1347,
             "Wind Turbine Manufacturer": "GE",
@@ -182,7 +182,7 @@
         },
         "105": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.617,
+            "Easting or Longitude": -102.617,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1346,
             "Wind Turbine Manufacturer": "GE",
@@ -206,7 +206,7 @@
         },
         "106": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.615,
+            "Easting or Longitude": -102.615,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1345,
             "Wind Turbine Manufacturer": "GE",
@@ -230,7 +230,7 @@
         },
         "107": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.609,
+            "Easting or Longitude": -102.609,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1343,
             "Wind Turbine Manufacturer": "GE",
@@ -254,7 +254,7 @@
         },
         "108": {
             "Project Name": "Colorado Green",
-            "Easting or Latitude": -102.606,
+            "Easting or Longitude": -102.606,
             "Northing or Latitude": 37.7156,
             "Ground Elevation Above Sea Level": 1344,
             "Wind Turbine Manufacturer": "GE",
@@ -279,13 +279,13 @@
     },
     "Measurement Device Summary": {
         "Gobblers Knob West": {
-            "Easting or Latitude": 37.675,
+            "Easting or Longitude": 37.675,
             "Northing or Latitude": -102.69583,
             "Ground Elevation Above Sea Level": 1375,
             "Measurement Device Height": 40
         },
         "Gobblers Knob East": {
-            "Easting or Latitude": 37.775,
+            "Easting or Longitude": 37.775,
             "Northing or Latitude": -102.55,
             "Ground Elevation Above Sea Level": 1314,
             "Measurement Device Height": 40
