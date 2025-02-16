@@ -1,19 +1,6 @@
 {
-    "Project Information": {
-        "Name": "Colorado Green (example data subset)",
-        "Owner": "Iberdrola Renewables / Shell WindEnergy",
-        "Number": "N/A",
-        "Author": "Example dataset",
-        "Date": "2022-03-27 00:00:00",
-        "Revision number and reason": "v00",
-        "Country": "Colorado, USA",
-        "Datum": "WGS84",
-        "Projection": "WGS84",
-        "Report filename": "N/A",
-        "Report revision number": "N/A",
-        "Digital exchange format version": "1.0"
-    },
-    "Meta data": {
+    "DEF version": "1.1",
+    "Meta Data": {
         "Number of wind direction sectors": 12,
         "Wind speed bin width": 1,
         "Number of measurement devices": 2,
@@ -35,245 +22,259 @@
             "108"
         ]
     },
+    "Project Information": {
+        "Project name": "Colorado Green (example data subset)",
+        "Project owner": "Iberdrola Renewables / Shell WindEnergy",
+        "Project number": null,
+        "Name": "Example author",
+        "Date": "2022-03-27",
+        "Revision number": 0,
+        "Reason for revision": "First issue",
+        "Country & state": "Colorado, USA",
+        "Turbine Coordinates Datum": "WGS84",
+        "Turbine Coordinates Projection": "UTM",
+        "Accompanying report file name": "ColoradoGreenSS_Rev00.pdf",
+        "Accompanying report revision number": "Rev00"
+    },
     "Turbine Layout Summary": {
         "97": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.595,
             "Northing or Latitude": 37.7145,
-            "Ground Elevation Above Sea Level": 1336,
+            "Ground Elevation": 1336.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
-            "Ve50": 59.56999999999999,
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
+            "Ve50": 59.57,
             "V50": 42.55,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.0667431519292674,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.609,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.609,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.0972584459784459,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0408153722743255,
+            "TI15": 0.0972584459784459,
+            "Sigma I": 0.0408153722743255,
             "Inflow Angle": 0.1
         },
         "98": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.601,
             "Northing or Latitude": 37.7145,
-            "Ground Elevation Above Sea Level": 1341,
+            "Ground Elevation": 1341.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
             "Ve50": 59.43,
             "V50": 42.45,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.587,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.587,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.097741645512272,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0407038972307305,
+            "TI15": 0.097741645512272,
+            "Sigma I": 0.0407038972307305,
             "Inflow Angle": 0.1
         },
         "100": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.598,
             "Northing or Latitude": 37.7145,
-            "Ground Elevation Above Sea Level": 1339,
+            "Ground Elevation": 1339.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
-            "Ve50": 59.36000000000001,
-            "V50": 42.400000000000006,
-            "COV": "N/A",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
+            "Ve50": 59.36,
+            "V50": 42.4,
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.576,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.576,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.0962849588851566,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.038221106091514,
+            "TI15": 0.0962849588851566,
+            "Sigma I": 0.038221106091514,
             "Inflow Angle": 0
         },
         "102": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.612,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1344,
+            "Ground Elevation": 1344.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
             "Ve50": 59.43,
             "V50": 42.45,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.587,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.587,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.097741645512272,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0407038972307305,
+            "TI15": 0.097741645512272,
+            "Sigma I": 0.0407038972307305,
             "Inflow Angle": 0
         },
         "103": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.623,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1345,
+            "Ground Elevation": 1345.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob West",
-            "Ve50": 59.36000000000001,
-            "V50": 42.400000000000006,
-            "COV": "N/A",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob West",
+            "Ve50": 59.36,
+            "V50": 42.4,
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.49,
-            "Scale Parameter of Weibull Function": 9.51,
-            "Shape Parameter of Weibull Function": 2.41,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.49,
+            "Weibull Scale Parameter": 9.51,
+            "Weibull Shape Parameter ": 2.41,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.2,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.0962849588851566,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.038221106091514,
+            "TI15": 0.0962849588851566,
+            "Sigma I": 0.038221106091514,
             "Inflow Angle": 0.1
         },
         "104": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.62,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1347,
+            "Ground Elevation": 1347.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob West",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob West",
             "Ve50": 59.43,
             "V50": 42.45,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.49,
-            "Scale Parameter of Weibull Function": 9.521,
-            "Shape Parameter of Weibull Function": 2.41,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.49,
+            "Weibull Scale Parameter": 9.521,
+            "Weibull Shape Parameter ": 2.41,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.2,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.097741645512272,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0407038972307305,
+            "TI15": 0.097741645512272,
+            "Sigma I": 0.0407038972307305,
             "Inflow Angle": 0.1
         },
         "105": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.617,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1346,
+            "Ground Elevation": 1346.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob West",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob West",
             "Ve50": 59.29,
             "V50": 42.35,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.49,
-            "Scale Parameter of Weibull Function": 9.499,
-            "Shape Parameter of Weibull Function": 2.41,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.49,
+            "Weibull Scale Parameter": 9.499,
+            "Weibull Shape Parameter ": 2.41,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.2,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.097543860855442,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0413294079691265,
+            "TI15": 0.097543860855442,
+            "Sigma I": 0.0413294079691265,
             "Inflow Angle": 0.1
         },
         "106": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.615,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1345,
+            "Ground Elevation": 1345.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob West",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob West",
             "Ve50": 59.29,
             "V50": 42.35,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.49,
-            "Scale Parameter of Weibull Function": 9.499,
-            "Shape Parameter of Weibull Function": 2.41,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.49,
+            "Weibull Scale Parameter": 9.499,
+            "Weibull Shape Parameter ": 2.41,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.2,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.097543860855442,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0413294079691265,
+            "TI15": 0.097543860855442,
+            "Sigma I": 0.0413294079691265,
             "Inflow Angle": 0
         },
         "107": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.609,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1343,
+            "Ground Elevation": 1343.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
-            "Ve50": 59.56999999999999,
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
+            "Ve50": 59.57,
             "V50": 42.55,
-            "COV": "N/A",
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.609,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.609,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.0972584459784459,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.0408153722743255,
+            "TI15": 0.0972584459784459,
+            "Sigma I": 0.0408153722743255,
             "Inflow Angle": 0.1
         },
         "108": {
             "Project Name": "Colorado Green",
             "Easting or Longitude": -102.606,
             "Northing or Latitude": 37.7156,
-            "Ground Elevation Above Sea Level": 1344,
+            "Ground Elevation": 1344.0,
             "Wind Turbine Manufacturer": "GE",
-            "Wind Turbine Model": "GE 1.6-91",
-            "Wind Turbine Rated Power": 1.6,
-            "Rotor Diameter": 91,
-            "Hub Height": 80,
-            "Associated Data Source": "Gobblers Knob East",
-            "Ve50": 59.36000000000001,
-            "V50": 42.400000000000006,
-            "COV": "N/A",
+            "Model": "GE 1.6-91",
+            "Rated Power": 1.6,
+            "Rotor Diameter": 91.0,
+            "Hub Height": 80.0,
+            "Data Source": "Gobblers Knob East",
+            "Ve50": 59.36,
+            "V50": 42.4,
+            "COV": null,
             "Air Density": 1.066,
-            "Annual Average Wind Speed at Hub Height": 8.5,
-            "Scale Parameter of Weibull Function": 9.576,
-            "Shape Parameter of Weibull Function": 2.34,
-            "Turbulence Structure Correction Parameter": 1.05,
+            "Annual Average Wind Speed": 8.5,
+            "Weibull Scale Parameter": 9.576,
+            "Weibull Shape Parameter ": 2.34,
+            "CCT": 1.05,
             "Annual Mean Wind Shear": 0.14,
-            "Annual Average Turbulence Intensity at 15 m/s": 0.0962849588851566,
-            "Standard Deviation of Turbulence Intensity at 15 m/s": 0.038221106091514,
+            "TI15": 0.0962849588851566,
+            "Sigma I": 0.038221106091514,
             "Inflow Angle": 0.1
         }
     },
@@ -281,19 +282,19 @@
         "Gobblers Knob West": {
             "Easting or Longitude": 37.675,
             "Northing or Latitude": -102.69583,
-            "Ground Elevation Above Sea Level": 1375,
-            "Measurement Device Height": 40
+            "Ground Elevation": 1375.0,
+            "Measurement Device Height": 40.0
         },
         "Gobblers Knob East": {
             "Easting or Longitude": 37.775,
             "Northing or Latitude": -102.55,
-            "Ground Elevation Above Sea Level": 1314,
-            "Measurement Device Height": 40
+            "Ground Elevation": 1314.0,
+            "Measurement Device Height": 40.0
         }
     },
-    "WS Frequency": {
+    "WS frequency": {
         "Gobblers Knob West": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.011418131993605847,
                     0.15414478191367892,
@@ -811,7 +812,7 @@
                     0.0
                 ]
             ],
-            "WS Number of samples": [
+            "WS number of samples": [
                 [
                     2,
                     27,
@@ -1331,7 +1332,7 @@
             ]
         },
         "Gobblers Knob East": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -1849,7 +1850,7 @@
                     0.0
                 ]
             ],
-            "WS Number of samples": [
+            "WS number of samples": [
                 [
                     2,
                     9,
@@ -2369,7 +2370,7 @@
             ]
         },
         "97": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -2889,7 +2890,7 @@
             ]
         },
         "98": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -3409,7 +3410,7 @@
             ]
         },
         "100": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -3929,7 +3930,7 @@
             ]
         },
         "102": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -4449,7 +4450,7 @@
             ]
         },
         "103": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.011418131993605847,
                     0.15414478191367892,
@@ -4969,7 +4970,7 @@
             ]
         },
         "104": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.011418131993605847,
                     0.15414478191367892,
@@ -5489,7 +5490,7 @@
             ]
         },
         "105": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.011418131993605847,
                     0.15414478191367892,
@@ -6009,7 +6010,7 @@
             ]
         },
         "106": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.011418131993605847,
                     0.15414478191367892,
@@ -6529,7 +6530,7 @@
             ]
         },
         "107": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -7049,7 +7050,7 @@
             ]
         },
         "108": {
-            "WS Frequency": [
+            "WS frequency": [
                 [
                     0.01141552511415525,
                     0.05136986301369863,
@@ -21641,7 +21642,7 @@
     },
     "Extreme Ambient TI": {
         "Gobblers Knob West": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 193.333333333333,
                 183.064516129032,
                 112.21945137157101,
@@ -21686,7 +21687,7 @@
             ]
         },
         "Gobblers Knob East": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -21731,7 +21732,7 @@
             ]
         },
         "97": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -21776,7 +21777,7 @@
             ]
         },
         "98": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -21821,7 +21822,7 @@
             ]
         },
         "100": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -21866,7 +21867,7 @@
             ]
         },
         "102": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -21911,7 +21912,7 @@
             ]
         },
         "103": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 193.333333333333,
                 183.064516129032,
                 112.21945137157101,
@@ -21956,7 +21957,7 @@
             ]
         },
         "104": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 193.333333333333,
                 183.064516129032,
                 112.21945137157101,
@@ -22001,7 +22002,7 @@
             ]
         },
         "105": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 193.333333333333,
                 183.064516129032,
                 112.21945137157101,
@@ -22046,7 +22047,7 @@
             ]
         },
         "106": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 193.333333333333,
                 183.064516129032,
                 112.21945137157101,
@@ -22091,7 +22092,7 @@
             ]
         },
         "107": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
@@ -22136,7 +22137,7 @@
             ]
         },
         "108": {
-            "SD TI all directions": [
+            "Extreme ambient TI": [
                 361.53846153846104,
                 294.838709677419,
                 167.52688172043,
