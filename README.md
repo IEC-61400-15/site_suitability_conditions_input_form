@@ -15,13 +15,13 @@ The XLSX spreadsheet file and Javascript Object Notation (JSON) file are intende
 
 ### Excel Version
 
-[Template](site_suitability_input_conditions_form_v16_20240305.xlsx)
+[Template](site_suitability_input_conditions_form_v17_20250215.xlsx)
 
-[Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.xlsx)
+[Template with example data](site_suitability_input_conditions_form_v17_20250215_with_example_data.xlsx)
 
 ### JSON Version (using the xlsx2json.py converter)
 
-[Template with example data](site_suitability_input_conditions_form_v16_20240305_with_example_data.json)
+[Template with example data](site_suitability_input_conditions_form_v17_20250215_with_example_data.json)
 
 ## Issues
 
