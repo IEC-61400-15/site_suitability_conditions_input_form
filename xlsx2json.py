@@ -108,24 +108,24 @@ for wt in wtids:
     tmpobj["Project Name"] = ws.cell(trow,1).value
     tmpobj["Easting or Latitude"] = ws.cell(trow,3).value
     tmpobj["Northing or Latitude"] = ws.cell(trow,4).value
-    tmpobj["Ground Elevation Above Sea Level"] = ws.cell(trow,5).value
+    tmpobj["Ground Elevation"] = ws.cell(trow,5).value
     tmpobj["Wind Turbine Manufacturer"] = ws.cell(trow,6).value
-    tmpobj["Wind Turbine Model"] = ws.cell(trow,7).value
-    tmpobj["Wind Turbine Rated Power"] = ws.cell(trow,8).value
+    tmpobj["Model"] = ws.cell(trow,7).value
+    tmpobj["Rated Power"] = ws.cell(trow,8).value
     tmpobj["Rotor Diameter"] = ws.cell(trow,9).value
     tmpobj["Hub Height"] = ws.cell(trow,10).value
-    tmpobj["Associated Data Source"] = ws.cell(trow,11).value
+    tmpobj["Data Source"] = ws.cell(trow,11).value
     tmpobj["Ve50"] = ws.cell(trow,12).value
     tmpobj["V50"] = ws.cell(trow,13).value
     tmpobj["COV"] = ws.cell(trow,14).value
     tmpobj["Air Density"] = ws.cell(trow,15).value
-    tmpobj["Annual Average Wind Speed at Hub Height"] = ws.cell(trow,16).value
-    tmpobj["Scale Parameter of Weibull Function"] = ws.cell(trow,17).value
-    tmpobj["Shape Parameter of Weibull Function"] = ws.cell(trow,18).value
-    tmpobj["Turbulence Structure Correction Parameter"] = ws.cell(trow,19).value
+    tmpobj["Annual Average Wind Speed"] = ws.cell(trow,16).value
+    tmpobj["Weibull Scale Parameter"] = ws.cell(trow,17).value
+    tmpobj["Weibull Shape Parameter "] = ws.cell(trow,18).value
+    tmpobj["CCT"] = ws.cell(trow,19).value
     tmpobj["Annual Mean Wind Shear"] = ws.cell(trow,20).value
-    tmpobj["Annual Average Turbulence Intensity at 15 m/s"] = ws.cell(trow,21).value
-    tmpobj["Standard Deviation of Turbulence Intensity at 15 m/s"] = ws.cell(trow,22).value
+    tmpobj["TI15"] = ws.cell(trow,21).value
+    tmpobj["Sigma I"] = ws.cell(trow,22).value
     tmpobj["Inflow Angle"] = ws.cell(trow,23).value
 
     OjTLS[wt] = tmpobj
@@ -144,7 +144,7 @@ for md in mdids:
     EachMDS = {}
     EachMDS["Easting or Latitude"] = ws.cell(trow,2).value
     EachMDS["Northing or Latitude"] = ws.cell(trow,3).value
-    EachMDS["Ground Elevation Above Sea Level"] = ws.cell(trow,4).value
+    EachMDS["Ground Elevation"] = ws.cell(trow,4).value
     EachMDS["Measurement Device Height"] = ws.cell(trow,5).value
 
     OjMDS[md] = EachMDS
@@ -493,7 +493,7 @@ top["Project Information"] = OjPI
 top["Meta data"] = OjMetaData
 top["Turbine Layout Summary"] = OjTLS
 top["Measurement Device Summary"] = OjMDS
-top["WS Frequency"] = OjWSF
+top["WS frequency"] = OjWSF
 top["WS Weibull"] = OjWSW
 top["Ambient Mean TI"] = OjAMTI
 top["SD TI"] = OjSDTI
@@ -507,6 +507,3 @@ top["CcT"] = OjCCT
 # Damp the json file
 with open(OutputJsonFile, 'w') as f:
     json.dump(top, f, ensure_ascii=False, indent=4)
-
-
-

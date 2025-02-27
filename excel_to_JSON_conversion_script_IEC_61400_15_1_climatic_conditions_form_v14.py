@@ -9,7 +9,6 @@ NOTE: This is not a proper JSON output, just one that can be copied and pasted e
 """
 
 import sys
-from pprint import pprint
 
 import numpy as np
 import pandas as pd
@@ -33,7 +32,7 @@ cumsum_samples_upper = [
 
 sheet_names_ranges = [
     ("Turbine Layout Summary", "A1:W10", [0], [9]),
-    ("WS Frequency","C3:R495", cumsum_samples_lower, cumsum_samples_upper),
+    ("WS frequency","C3:R495", cumsum_samples_lower, cumsum_samples_upper),
     ("WS Weibull", "C3:O41", [0, 13, 26], [13, 26, 38]), # Needs an ALL Row (first element of the first two rows)
     ("Ambient Mean TI", "C3:O536", cumsum_samples_lower, cumsum_samples_upper),  # Needs an ALL Row
     ("SD TI", "C3:O536", cumsum_samples_lower, cumsum_samples_upper),  # Needs an ALL Row
@@ -62,7 +61,6 @@ def read_sheet_data(wb, sheet_name, data_range, lower, upper):
             data_dict[col] = convert_column_to_dict(data.iloc[:, i].tolist(), lower, upper)
     
     return data_dict
-    
 
 
 if __name__ == "__main__":
@@ -101,22 +99,3 @@ if __name__ == "__main__":
             else:
                 f.write(f"{INDENT}}},\n")
         f.write("}")
-    
-    
-    # OLD
-
-    # for col in data.columns:
-    #     data_dict[col] = convert_column_to_dict(data[col].tolist())
-
-    # with open(fn_save, "w") as f:
-    #     for k, v in data_dict.items():
-    #         f.write(f'"{k}": {{\n')
-    #         for i, lst in enumerate(v):
-    #             # Consistently format the list to a string format
-    #             lst_str = ", ".join([f"{el:.18f}" for el in lst])
-    #             if i == len(v) - 1:
-    #                 f.write(f"        [{lst_str}]\n")
-    #             else:
-    #                 f.write(f"        [{lst_str}],\n")
-    #         # Close the list of lists bracket
-    #         f.write("    ]\n},\n")
