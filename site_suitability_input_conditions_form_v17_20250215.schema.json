@@ -35,12 +35,7 @@
         "Annual Mean Wind Shear": { "type": "number" },
         "TI15": { "type": "number" },
         "Sigma I": { "type": "number" },
-        "Inflow Angle": {
-          "anyOf": [
-            { "type": "number" },
-            { "type": "integer" }
-          ]
-        }
+        "Inflow Angle": { "type": "number" }
       },
       "required": [
         "Air Density",
@@ -181,7 +176,7 @@
       "type": "object",
       "properties": {
         "Yearly mean ambient Temperature": { "type": "number" },
-        "Days per year with at least 1 hour below -20 deg": { "type": "integer" },
+        "Days per year with at least 1 hour below -20 deg": { "type": "number" },
         "Temperature frequency": {
           "type": "array",
           "items": { "type": "number" }
@@ -216,12 +211,7 @@
       "type": "object",
       "properties": {
         "Inflow angle all directions": { "type": "number" },
-        "Inflow angle max": {
-          "anyOf": [
-            { "type": "number" },
-            { "type": "integer" }
-          ]
-        },
+        "Inflow angle max": { "type": "number" },
         "Directional Inflow angle": {
           "type": "array",
           "items": { "type": "number" }
@@ -255,8 +245,14 @@
     "Meta Data": {
       "type": "object",
       "properties": {
-        "Number of wind direction sectors": { "type": "integer" },
-        "Wind speed bin width": { "type": "number" },
+        "Number of wind direction sectors": {
+          "type": "integer",
+          "enum": [12, 16]
+        },
+        "Wind speed bin width": {
+          "type": "integer",
+          "enum": [1, 2]
+        },
         "Number of measurement devices": { "type": "integer" },
         "Measurement device IDs": {
           "type": "array",
@@ -290,7 +286,10 @@
           ]
         },
         "Name": { "type": "string" },
-        "Date": { "type": "string" },
+        "Date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
         "Revision number": { "type": "integer" },
         "Reason for revision": { "type": "string" },
         "Country & state": { "type": "string" },
