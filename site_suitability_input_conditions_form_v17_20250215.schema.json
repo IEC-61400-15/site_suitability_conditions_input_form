@@ -30,7 +30,7 @@
         "Air Density": { "type": "number" },
         "Annual Average Wind Speed": { "type": "number" },
         "Weibull Scale Parameter": { "type": "number" },
-        "Weibull Shape Parameter ": { "type": "number" },
+        "Weibull Shape Parameter": { "type": "number" },
         "CCT": { "type": "number" },
         "Annual Mean Wind Shear": { "type": "number" },
         "TI15": { "type": "number" },
@@ -62,7 +62,7 @@
         "V50",
         "Ve50",
         "Weibull Scale Parameter",
-        "Weibull Shape Parameter ",
+        "Weibull Shape Parameter",
         "Wind Turbine Manufacturer"
       ]
     },

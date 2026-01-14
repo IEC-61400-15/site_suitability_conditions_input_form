@@ -121,7 +121,7 @@ for wt in wtids:
     tmpobj["Air Density"] = ws.cell(trow,15).value
     tmpobj["Annual Average Wind Speed"] = ws.cell(trow,16).value
     tmpobj["Weibull Scale Parameter"] = ws.cell(trow,17).value
-    tmpobj["Weibull Shape Parameter "] = ws.cell(trow,18).value
+    tmpobj["Weibull Shape Parameter"] = ws.cell(trow,18).value
     tmpobj["CCT"] = ws.cell(trow,19).value
     tmpobj["Annual Mean Wind Shear"] = ws.cell(trow,20).value
     tmpobj["TI15"] = ws.cell(trow,21).value
