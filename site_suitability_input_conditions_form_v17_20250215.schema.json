@@ -1,0 +1,376 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$version": "1.1",
+  "title": "Site suitability input conditions form",
+  "description": "JSON Schema for the IEC 61400-15-1 site suitability input conditions form",
+  "type": "object",
+  "additionalProperties": true,
+  "$defs": {
+    "TurbineLayoutEntry": {
+      "type": "object",
+      "properties": {
+        "Project Name": { "type": "string" },
+        "Easting or Longitude": { "type": "number" },
+        "Northing or Latitude": { "type": "number" },
+        "Ground Elevation": { "type": "number" },
+        "Wind Turbine Manufacturer": { "type": "string" },
+        "Model": { "type": "string" },
+        "Rated Power": { "type": "number" },
+        "Rotor Diameter": { "type": "number" },
+        "Hub Height": { "type": "number" },
+        "Data Source": { "type": "string" },
+        "Ve50": { "type": "number" },
+        "V50": { "type": "number" },
+        "COV": {
+          "anyOf": [
+            { "type": "number" },
+            { "type": "null" }
+          ]
+        },
+        "Air Density": { "type": "number" },
+        "Annual Average Wind Speed": { "type": "number" },
+        "Weibull Scale Parameter": { "type": "number" },
+        "Weibull Shape Parameter": { "type": "number" },
+        "CCT": { "type": "number" },
+        "Annual Mean Wind Shear": { "type": "number" },
+        "TI15": { "type": "number" },
+        "Sigma I": { "type": "number" },
+        "Inflow Angle": { "type": "number" }
+      },
+      "required": [
+        "Air Density",
+        "Annual Average Wind Speed",
+        "Annual Mean Wind Shear",
+        "CCT",
+        "Data Source",
+        "Easting or Longitude",
+        "Ground Elevation",
+        "Hub Height",
+        "Inflow Angle",
+        "Model",
+        "Northing or Latitude",
+        "Project Name",
+        "Rated Power",
+        "Rotor Diameter",
+        "Sigma I",
+        "TI15",
+        "V50",
+        "Ve50",
+        "Weibull Scale Parameter",
+        "Weibull Shape Parameter",
+        "Wind Turbine Manufacturer"
+      ]
+    },
+    "MeasurementDeviceEntry": {
+      "type": "object",
+      "properties": {
+        "Easting or Longitude": { "type": "number" },
+        "Northing or Latitude": { "type": "number" },
+        "Ground Elevation": { "type": "number" },
+        "Measurement Device Height": { "type": "number" }
+      },
+      "required": [
+        "Easting or Longitude",
+        "Ground Elevation",
+        "Measurement Device Height",
+        "Northing or Latitude"
+      ]
+    },
+    "WSFrequencyEntry": {
+      "type": "object",
+      "properties": {
+        "WS frequency": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        },
+        "WS number of samples": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "integer" }
+          }
+        }
+      },
+      "required": ["WS frequency"]
+    },
+    "WSWeibullEntry": {
+      "type": "object",
+      "properties": {
+        "WS Weibull scale parameter all directions": { "type": "number" },
+        "WS Weibull shape parameter all directions": { "type": "number" },
+        "WS Weibull scale parameter": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "WS Weibull shape parameter": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "WS Weibull frequency": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "required": [
+        "WS Weibull frequency",
+        "WS Weibull scale parameter",
+        "WS Weibull scale parameter all directions",
+        "WS Weibull shape parameter",
+        "WS Weibull shape parameter all directions"
+      ]
+    },
+    "AmbientTIEntry": {
+      "type": "object",
+      "properties": {
+        "Ambient mean TI all directions": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "Ambient mean TI": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        }
+      },
+      "required": [
+        "Ambient mean TI",
+        "Ambient mean TI all directions"
+      ]
+    },
+    "SDTIEntry": {
+      "type": "object",
+      "properties": {
+        "SD TI all directions": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "SD TI": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": { "type": "number" }
+          }
+        }
+      },
+      "required": [
+        "SD TI",
+        "SD TI all directions"
+      ]
+    },
+    "ExtremeTIEntry": {
+      "type": "object",
+      "properties": {
+        "Extreme ambient TI": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "required": ["Extreme ambient TI"]
+    },
+    "TemperatureEntry": {
+      "type": "object",
+      "properties": {
+        "Yearly mean ambient Temperature": { "type": "number" },
+        "Days per year with at least 1 hour below -20 deg": { "type": "number" },
+        "Temperature frequency": {
+          "type": "array",
+          "items": { "type": "number" }
+        },
+        "Number of samples": {
+          "type": "array",
+          "items": { "type": "integer" }
+        }
+      },
+      "required": [
+        "Days per year with at least 1 hour below -20 deg",
+        "Number of samples",
+        "Temperature frequency",
+        "Yearly mean ambient Temperature"
+      ]
+    },
+    "ShearEntry": {
+      "type": "object",
+      "properties": {
+        "Shear all directions": { "type": "number" },
+        "Directional shear": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "required": [
+        "Directional shear",
+        "Shear all directions"
+      ]
+    },
+    "InflowAngleEntry": {
+      "type": "object",
+      "properties": {
+        "Inflow angle all directions": { "type": "number" },
+        "Inflow angle max": { "type": "number" },
+        "Directional Inflow angle": {
+          "type": "array",
+          "items": { "type": "number" }
+        }
+      },
+      "required": [
+        "Directional Inflow angle",
+        "Inflow angle all directions",
+        "Inflow angle max"
+      ]
+    },
+    "CcTEntry": {
+      "type": "object",
+      "properties": {
+        "sigma 3/sigma 1": { "type": "number" },
+        "sigma 2/sigma 1": { "type": "number" },
+        "CcT": { "type": "number" }
+      },
+      "required": [
+        "CcT",
+        "sigma 2/sigma 1",
+        "sigma 3/sigma 1"
+      ]
+    }
+  },
+  "properties": {
+    "DEF version": {
+      "const": "1.1",
+      "type": "string"
+    },
+    "Meta Data": {
+      "type": "object",
+      "properties": {
+        "Number of wind direction sectors": {
+          "type": "integer",
+          "enum": [12, 16]
+        },
+        "Wind speed bin width": {
+          "type": "integer",
+          "enum": [1, 2]
+        },
+        "Number of measurement devices": { "type": "integer" },
+        "Measurement device IDs": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "Number of wind turbines": { "type": "integer" },
+        "Wind turbine IDs": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "required": [
+        "Measurement device IDs",
+        "Number of measurement devices",
+        "Number of wind direction sectors",
+        "Number of wind turbines",
+        "Wind speed bin width",
+        "Wind turbine IDs"
+      ]
+    },
+    "Project Information": {
+      "type": "object",
+      "properties": {
+        "Project name": { "type": "string" },
+        "Project owner": { "type": "string" },
+        "Project number": {
+          "anyOf": [
+            { "type": "number" },
+            { "type": "string" },
+            { "type": "null" }
+          ]
+        },
+        "Name": { "type": "string" },
+        "Date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "Revision number": { "type": "integer" },
+        "Reason for revision": { "type": "string" },
+        "Country & state": { "type": "string" },
+        "Turbine Coordinates Datum": { "type": "string" },
+        "Turbine Coordinates Projection": { "type": "string" },
+        "Accompanying report file name": { "type": "string" },
+        "Accompanying report revision number": { "type": "string" }
+      },
+      "required": [
+        "Accompanying report file name",
+        "Accompanying report revision number",
+        "Country & state",
+        "Date",
+        "Name",
+        "Project name",
+        "Project owner",
+        "Reason for revision",
+        "Revision number",
+        "Turbine Coordinates Datum",
+        "Turbine Coordinates Projection"
+      ]
+    },
+    "Turbine Layout Summary": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/TurbineLayoutEntry" }
+    },
+    "Measurement Device Summary": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/MeasurementDeviceEntry" }
+    },
+    "WS frequency": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/WSFrequencyEntry" }
+    },
+    "WS Weibull": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/WSWeibullEntry" }
+    },
+    "Ambient Mean TI": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/AmbientTIEntry" }
+    },
+    "SD TI": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/SDTIEntry" }
+    },
+    "Extreme Ambient TI": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/ExtremeTIEntry" }
+    },
+    "Temperature": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/TemperatureEntry" }
+    },
+    "Shear": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/ShearEntry" }
+    },
+    "Inflow Angle": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/InflowAngleEntry" }
+    },
+    "CcT": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/CcTEntry" }
+    }
+  },
+  "required": [
+    "Ambient Mean TI",
+    "CcT",
+    "DEF version",
+    "Extreme Ambient TI",
+    "Inflow Angle",
+    "Measurement Device Summary",
+    "Meta Data",
+    "Project Information",
+    "SD TI",
+    "Shear",
+    "Temperature",
+    "Turbine Layout Summary",
+    "WS Weibull",
+    "WS frequency"
+  ]
+}
