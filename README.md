@@ -19,9 +19,13 @@ The XLSX spreadsheet file and Javascript Object Notation (JSON) file are intende
 
 [Template with example data](site_suitability_input_conditions_form_v17_20250215_with_example_data.xlsx)
 
-### JSON Version (using the xlsx2json.py converter)
+### JSON Version
 
-[Template with example data](site_suitability_input_conditions_form_v17_20250215_with_example_data.json)
+[JSON Schema](site_suitability_input_conditions_form_v17_20250215.schema.json)
+
+[Template with example data](site_suitability_input_conditions_form_v17_20250215_with_example_data.json) (using the xlsx2json.py converter)
+
+Note that some of the property names (keys) in the JSON files differ slightly from those specified in the IEC 61400-15-1:2025 document. This was noticed at a late stage and the files have not been changed to avoid the risk of breaking changes for uses who already rely on the formats from this repository. To highlight that there are minor differences, the property `"DEF version"` is set to `"1.1"` in the JSON Schema and JSON template rather than `"1.0"` as specified in the standard document.
 
 ## Issues
 
